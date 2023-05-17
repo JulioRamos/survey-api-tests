@@ -6,7 +6,7 @@ from survey_api.parameters import CUSTOMER_ID
 # Unit tests for the survey API
 class TestSurveyAPI(unittest.TestCase):
 
-    def test_submit_survey_required_fields(self):
+    def test_submit_survey_happy_path_all_fields(self):
         # Test the happy path for submitting a survey
         cea = CustomerExportAPI(CUSTOMER_ID)
         sp = SurveyPage(cea.get_survey_link())
@@ -42,7 +42,7 @@ class TestSurveyAPI(unittest.TestCase):
 
         print ('Test Passed')
 
-    def test_submit_survey_optional_field_missing(self):
+    def test_submit_survey_happy_path_optional_field_missing(self):
         # Test the happy path for submitting a survey with a blank answer for the favorite movie
         cea = CustomerExportAPI(CUSTOMER_ID)
         sp = SurveyPage(cea.get_survey_link())
