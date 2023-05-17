@@ -23,7 +23,7 @@ API_KEY_ID = 'YOUR_API_KEY_ID'
 API_KEY_SECRET = 'YOUR_API_KEY_SECRET'
 ```
 
-4.Run the tests:
+4. Run the tests:
 ``` bash
 python -m unittest discover -s tests/
 ```
