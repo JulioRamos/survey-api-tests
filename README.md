@@ -1,4 +1,4 @@
-﻿# survey-api-tests
+# survey-api-tests
 
 ## Task 1
 Your task is to write automated API tests for a simple use case of submitting a Survey described below. You can choose to implement these tests in either Python or GoLang
@@ -33,7 +33,7 @@ The framework has the following structure:
 ├── README.md  
 ├── requirements.txt  
 ├── survey_api  
-├   ├── survey_api.py  
+│   ├── survey_api.py  
 │   ├── credentials.py  
 │   └── parameters.py  
 └── tests  
@@ -44,10 +44,11 @@ The framework has the following structure:
 * tests: contains the test cases for the Survey API.
 
 ### Test Cases
-The framework includes the following test cases:
-test_submit_survey_happy_path_all_fields: tests that when a customer submits a survey with all required fields, an event is tracked asynchronously to the customer's profile for each answered question of the survey, and the tracked event contains the expected information.
-test_submit_survey_happy_path_optional_field_missing: tests when a customer submits a survey with one missing non-required field (favorite movie). In this scenario, the tracked event must contain the relevant data but the movie should be empty.
-test_submit_survey_missing_required_field: tests that when a customer submits a survey with missing required fields. In this scenario, the tracked event must not contain any of the data that the customer tried to submit.
+The framework includes the following test cases:  
+
+* test_submit_survey_happy_path_all_fields: tests that when a customer submits a survey with all required fields, an event is tracked asynchronously to the customer's profile for each answered question of the survey, and the tracked event contains the expected information.
+* test_submit_survey_happy_path_optional_field_missing: tests when a customer submits a survey with one missing non-required field (favorite movie). In this scenario, the tracked event must contain the relevant data but the movie should be empty.
+* test_submit_survey_missing_required_field: tests that when a customer submits a survey with missing required fields. In this scenario, the tracked event must not contain any of the data that the customer tried to submit.
 
 ## Task 2
 Think about what other scenarios could be tested and define at least 3 such test scenarios in writing. You do not need to implement these tests
